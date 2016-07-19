@@ -1,6 +1,9 @@
 Android StackBlur
 =================
 
+This is the exact version of kikoso's android-stackblur that can be found here: https://github.com/kikoso/android-stackblur
+What I have done is made the library available through jitpack.
+
 Android StackBlur is a library that can perform a blurry effect on a Bitmap based on a gradient or radius, and return the result. The library is based on the code of Mario Klingemann. 
 
 The library is compatible for Android versions 1.5 (so pretty much compatible with every device).
@@ -20,7 +23,25 @@ Acknowledgements
 
 Usage
 --------------------
-Download the library with git. When it has been imported into your project. First initialize your StackBlurManager to load a sample image:
+
+##Adding to your project
+
+Add the jcenter repository information in your build.gradle file like this
+```java
+
+repositories {
+  jcenter()
+  maven { url "https://jitpack.io" }
+}
+
+
+dependencies {
+  compile 'com.github.isg245:MaterialDateRangePicker:1.4'
+}
+
+```
+
+First initialize your StackBlurManager to load a sample image:
 ```java
     _stackBlurManager = new StackBlurManager(getBitmapFromAsset(this, "android_platform_256.png"));
 ```
